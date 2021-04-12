@@ -77,6 +77,10 @@
     font-size: 15px;
     padding: 10px;
 }
+.profile-card .container .card hr{
+    border-color: transparent ;
+    background-color: #eee ;
+}
 .profile-card .container .card .info{
     display: flex;
     justify-content: space-evenly;
