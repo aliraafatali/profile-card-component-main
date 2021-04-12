@@ -1,0 +1,100 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*{
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+}
+.profile-card{
+    background-color: hsl(185, 75%, 39%);
+    width: 100vw;
+    height: calc(100vh - 21px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -2;
+}
+.profile-card .container{
+    z-index: 1;
+}
+.profile-card .container .card {
+    background-color: white;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.profile-card .card::before{
+    content: url(../images/bg-pattern-top.svg);
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -660px;
+    left: -840px;
+    z-index: -1;
+}
+.profile-card .card::after{
+    content: url(../images/bg-pattern-bottom.svg);
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+    z-index: -1;
+}
+.profile-card .container .card .images{
+    width: 100%;
+    position: relative;
+}
+.profile-card .container .card .images img:nth-of-type(1){
+    width: 100%;
+    height: calc(100% / 3);
+    -o-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+    -o-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.profile-card .container .card .images img:nth-of-type(2){
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 6px solid white;
+    position: absolute;
+    bottom: -33%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.profile-card .container .card .personal-p{
+    font-weight: 700;
+    text-align: center;
+    padding-top: 50px;
+}
+.profile-card .container .card .personal-p span{
+    color: hsl(227, 10%, 46%);
+    font-weight: 400;
+}
+.profile-card .container .card .personal-p span:nth-of-type(2){
+    display: block;
+    font-size: 15px;
+    padding: 10px;
+}
+.profile-card .container .card .info{
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile-card .container .card .info p{
+    font-weight: 700;
+}
+.profile-card .container .card .info p span{
+    display: block;
+    font-weight: 400;
+    color: hsl(227, 10%, 46%);
+    font-size: 12px;
+    padding-top: 10px;
+}
+.profile-card .container .card .info p .followers{
+    margin-left: -10px;
+}
+.profile-card .container .card .info p .likes{
+    margin-left: 10px;
+}
+/* end profile-card */
